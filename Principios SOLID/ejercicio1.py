@@ -8,20 +8,24 @@ class Matriz():
     def __init__(self, elementos):
         self.elementos = elementos
 
-class ToDo(Matriz):
-    def imprimir(self):
-        for fila in self.elementos:
-            print(fila)
+class Transpuesta(Matriz):
+    def __init__(self, elementos: list):
+        super().__init__(elementos)
 
     def transpuesta(self):
         return Matriz([[fila[i] for fila in self.elementos] for i in range(len(self.elementos[0]))])
-    
-m = Matriz([[1, 2], [3, 4]])
-todo1 = ToDo(m.elementos)
-todo1.imprimir()
 
+class Imprimir(Matriz):
+    def __init__(self, elementos: list):
+        super().__init__(elementos)
+
+    def imprimir(self):
+        for fila in self.elementos: 
+        # Hacer recursiva para datos más grandes, no hacer bucle porque sino se peta
+            print(fila)
+
+m = Imprimir([[1, 2], [3, 4]])
+m.imprimir()
 print()
-
-m_transpuesta = todo1.transpuesta()
-todo2 = ToDo(m_transpuesta.elementos)
-todo2.imprimir()
+t = Transpuesta(m.elementos)
+Imprimir(t.transpuesta().elementos).imprimir()
