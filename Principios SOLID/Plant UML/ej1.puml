@@ -1,4 +1,4 @@
-@startuml
+@startuml Ejercicio1
 
 class Matriz {
   - elementos: List[List[int]]
