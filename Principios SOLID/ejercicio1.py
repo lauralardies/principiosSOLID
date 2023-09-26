@@ -50,10 +50,6 @@ class Lanzador():
         imprimir_transpuesta = Imprimir(transpuesta_result.elementos)
         imprimir_transpuesta.imprimir()
 
-class Main():
-    def __init__(self):
-        self.lanzar = Lanzador()
-        self.lanzar.lanzar()
-
 if __name__ == "__main__":
-    Main()
+    lanzador = Lanzador()
+    lanzador.lanzar()
