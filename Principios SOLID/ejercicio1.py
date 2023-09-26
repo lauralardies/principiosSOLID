@@ -23,9 +23,37 @@ class Imprimir(Matriz):
         for fila in self.elementos: 
         # Hacer recursiva para datos más grandes, no hacer bucle porque sino se peta
             print(fila)
+     
+class Lanzador():
+    # Creame un metodo que llame a la función imprimir y a la función transpuesta y me recoja los datos de la matriz con un input y un output.
+    def __init__(self):
+        self.elementos = []
+        self.cantidad_filas = int(input("Introduce la cantidad de filas: "))
+        self.cantidad_columnas = int(input("Introduce la cantidad de columnas: "))
+        self.create_matrix()
+        self.matriz = Matriz(self.elementos)
+        self.transpuesta = Transpuesta(self.elementos)
+        self.imprimir = Imprimir(self.elementos)
+    
+    def create_matrix(self):
+        for i in range(self.cantidad_filas):
+            fila = []
+            for j in range(self.cantidad_columnas):
+                fila.append(int(input(f"Introduce el elemento {i+1},{j+1}: ")))
+            self.elementos.append(fila)
 
-m = Imprimir([[1, 2], [3, 4]])
-m.imprimir()
-print()
-t = Transpuesta(m.elementos)
-Imprimir(t.transpuesta().elementos).imprimir()
+    def lanzar(self):
+        print('La matriz es: ')
+        self.imprimir.imprimir()
+        print('La matriz transpuesta es: ')
+        transpuesta_result = self.transpuesta.transpuesta()
+        imprimir_transpuesta = Imprimir(transpuesta_result.elementos)
+        imprimir_transpuesta.imprimir()
+
+class Main():
+    def __init__(self):
+        self.lanzar = Lanzador()
+        self.lanzar.lanzar()
+
+if __name__ == "__main__":
+    Main()
