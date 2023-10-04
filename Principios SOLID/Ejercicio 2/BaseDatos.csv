@@ -1,6 +1,0 @@
-nombre;apellido;dinero;direccion;telefono;email;password;n_pedidos
-Juan;Perez;2500;Calle A, Ciudad A;555-1234;juan.perez@email.com;contrasena123;5
-María;López;1800;Avenida B, Ciudad B;555-5678;maria.lopez@email.com;clave456;3
-Pedro;González;3200;Calle C, Ciudad C;555-9876;pedro.gonzalez@email.com;password789;7
-Laura;Martínez;1500;Calle D, Ciudad D;555-4321;laura.martinez@email.com;miclave101;2
-Ana;Hernández;4200;Avenida E, Ciudad E;555-8765;ana.hernandez@email.com;secreto123;4
